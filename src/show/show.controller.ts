@@ -24,6 +24,7 @@ import {
   ApiBody,
   ApiCreatedResponse,
   ApiOperation,
+  ApiBearerAuth,
 } from '@nestjs/swagger';
 
 @ApiTags('show')
@@ -36,6 +37,7 @@ export class ShowController {
   @UseGuards(RolesGuard)
   @UsePipes(ValidationPipe)
   @ApiBody({ type: CreateShowDto })
+  @ApiBearerAuth()
   @ApiOperation({ summary: '공연 생성 API', description: '공연을 생성한다.' })
   @ApiCreatedResponse({ description: 'Show registration successful' })
   async registerShow(@Body() createShowDto: CreateShowDto): Promise<object> {

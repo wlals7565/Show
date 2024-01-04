@@ -14,7 +14,7 @@ import { SigninUserDto } from './dto/signin-user.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { GetUser } from './decorator/get-user.decorator';
 import { User } from './entities/user.entity';
-import { ApiTags, ApiBody, ApiOperation } from '@nestjs/swagger';
+import { ApiTags, ApiBody, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 
 @ApiTags('user')
 @Controller('user')
@@ -54,6 +54,7 @@ export class UserController {
     summary: '내 정보 보기 API',
     description: '내 정보를 봅니다.',
   })
+  @ApiBearerAuth()
   async getMyProfile(@GetUser() user: User) {
     return {
       code: 200,
