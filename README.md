@@ -3,11 +3,10 @@
 
 ## swagger api 문서
 - [API 문서 주소](http://52.78.24.132/api)
-- 미완성입니다.
+
 
 ## ERD URL
 https://www.erdcloud.com/d/AfHDLqD4ZWySWj2wK
-- 미완성입니다.
 
 ## admin 계정
 - 공연을 등록하고 싶다면 admin계정을 이용해야 합니다.
